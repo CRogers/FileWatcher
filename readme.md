@@ -15,3 +15,13 @@ The following selectors can be used in commands:
 * `:ext` - the file's extension
 * `:dir` - the directory the file is in
 * `:path` - the full expanded path of file
+
+---
+
+Place this at the bottom of your `~/.bashrc` file (Ubuntu, `~/.bash_profile` for others) to use `filewatcher` as a command:
+
+	function filewatcher() {
+		FW_PATH=/media/Storage/Dropbox/Programming/ruby/FileWatcher;
+		export RUBYLIB=$FW_PATH/:$RUBYLIB;
+		ruby $FW_PATH/filewatcher.rb "$@";
+	}
