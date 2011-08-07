@@ -6,7 +6,7 @@ command = ARGV[2]
 del = ARGV[3]
 
 def replace_vars(str, file)
-	str.gsub(':wefile', File.basename(file, File.extname(file))).gsub(':file', File.basename(file)).gsub(':dir', File.dirname(file)).gsub(':ext', File.extname(file)).gsub(':path', file) 
+	str.gsub(':wefile', File.basename(file, File.extname(file))).gsub(':file', File.basename(file)).gsub(':dir', File.dirname(file)).gsub(':ext', File.extname(file)).gsub(':path', file)
 end
 
 watcher = FileSystemWatcher.new
