@@ -18,10 +18,10 @@ The following selectors can be used in commands:
 
 ---
 
-Place this at the bottom of your `~/.bashrc` file (Ubuntu, `~/.bash_profile` for others) to use `filewatcher` as a command:
+Put this into a file called `filewatcher` somewhere on your `$PATH` (like a `~/bin`, if you've added it) to use `filewatcher` as a command:
 
-	function filewatcher() {
-		FW_PATH=/media/Storage/Dropbox/Programming/ruby/FileWatcher;
-		export RUBYLIB=$FW_PATH/:$RUBYLIB;
-		ruby $FW_PATH/filewatcher.rb "$@";
-	}
+	!#/bin/sh
+	
+	FW_PATH=/media/Storage/Dropbox/Programming/ruby/FileWatcher;
+	export RUBYLIB=$FW_PATH/:$RUBYLIB;
+	ruby $FW_PATH/filewatcher.rb "$@";
